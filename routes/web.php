@@ -41,7 +41,7 @@ Route::get('banners/change-status/{id}', 'BannerController@changeStatus');
 
 
 Route::resource('advertisements', 'AdvertisementsController');
-Route::get('advertisements/changestatus/{id}', 'AdvertisementsController@changeStatus');
+Route::get('advertisements/changestatus/{id}','AdvertisementsController@changeStatus');
 
 Route::resource('cms', 'CmsController');
 
