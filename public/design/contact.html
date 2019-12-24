@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Disciple Mart</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsivetabs.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body loginmodal">
+            <div class="col-sm-6">
+              <h2>Register As <span>Member</span></h2>
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="loginbtn">Register Now</button>
+              </form>
+            </div>
+            <div class="col-sm-6">
+              <h2>Login As <span>Member</span></h2>
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="row helpdesk">
+                  <div class="col-xs-6">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Check me out
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <p class="help-block"><a href="#">Forgot Password?</a></p>
+                  </div>
+                </div>
+                <button type="submit" class="loginbtn">Login Now</button>
+              </form>
+            </div>
+            <div class="clearfix"></div>
+            <div class="socialLogin">
+              <span class="ortext">You Can Also</span>
+              <div class="row">
+                <div class="col-xs-6">
+                  <button type="submit" class="loginbtn facebookbtn">Login With Facebook</button>
+                </div>
+                <div class="col-xs-6">
+                  <button type="submit" class="loginbtn googlebtn">Login With Google</button>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="callbackModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body loginmodal">
+            <div class="col-sm-12">
+              <h2> Call Back <span>Request</span></h2>
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Contact">
+                </div>
+                <button type="submit" class="loginbtn">Submit Now</button>
+              </form>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="callback" data-toggle="modal" data-target="#callbackModal">Request <span>Callback</span></a>
+    
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" class="img-responsive"></a>
+          </div>
+          <div class="col-sm-9">
+            <form class="searchform" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-default mainNav">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand hidden-lg" href="#"><img src="images/logo.png" class="img-responsive"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Become an Instructor</a></li>
+            <li><a href="#">Our Courses</a></li>
+            <li><a href="#">We Are Hiring</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#" data-toggle="modal" data-target="#myModal">Login / Register</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="clearfix"></div>
+
+    <div class="courseListArea">
+      <div class="container">
+        <h2>Contact <span>Us</span></h2>
+        <p>Aenean sodales nibh eget ves ti bulum venenatis. Sed fringilla leo erat. Praesent sed scelerisque.</p>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.1840689017513!2d88.34878231448995!3d22.57221793867425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277a5adda2a25%3A0xe2ac20858eaad14d!2sLodha+Skill+Academy+Pvt.+Ltd!5e0!3m2!1sen!2sin!4v1504952562099" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="spacer50"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="contentbox">
+            <h2>Our <span>Address</span></h2>
+            <ul class="whylist">
+              <li>56E Hemanta Basu Sarani, Stephen House,<br/>2nd Floor, Suite No. 27<br/>Kolkata 700001</li>
+              <li><strong>Phone number :</strong> +91 9804982656</li>
+              <li><strong>Email us :</strong> info@disciplemart.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="formbox">
+          <h3>Personal Information</h3>
+            <form>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="First Name">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Last Name">
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Contact">
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Write Something About Yourself"></textarea>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-8"></div>
+                <div class="col-sm-4">
+                  <button type="submit" class="loginbtn">Submit Now</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="spacer50"></div>
+
+    <div style="display: none;" id="hidden-content">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Collapsible Group Item #1
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Collapsible Group Item #2
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Collapsible Group Item #3
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+
+      </div><!-- panel-group -->
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="spacer50"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5">
+            <h3>About Us</h3>
+            <p class="widget-contact__text">Disciple Mart is a leading online learning platform with a view to cater to the needs of learners with the help of quality learning, in order to sharpen their skills, thereby paving the way to achieve professional and personal goals. Being a master in the field of online education, Disciple Mart serves any potential learner with an exhaustive library of online top-notch quality courses by eminent industry experts.</p>
+          </div>
+          <div class="col-sm-3">
+            <h3>Explore</h3>
+            <ul class="widget-list">
+              <li><a href="index.php">Home</a></li>
+              <li><a href="http://airboundsolutions.com" target="_blank">About Us</a></li>
+              <li><a href="become_instructor.php">Become An Instructor</a></li>
+              <li><a href="careers.php">We Are Hiring</a></li>
+              <li><a href="contact_us.php">Contact Us</a></li>
+              <li><a href="terms_of_use.php">Terms Of Use</a></li>
+              <li><a href="privacy_policy.php">Privacy Policy</a></li>
+              <li><a href="security.php">Security</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#affiliate">Affiliate Program</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#reward">Reward on Referral</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#policy">Refund Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <h3>Disciple Mart</h3>
+            <ul class="widget-contact">
+                <li>
+                  <h4 class="widget-contact__title">Location:</h4>
+                  <p class="widget-contact__text">56E Hemanta Basu Sarani, Stephen House, 2nd Floor, Suite No. 27, Kolkata 700001</p>
+                </li>
+                <li>
+                  <h4 class="widget-contact__title">Telephone:</h4>
+                  <p class="widget-contact__text">+91 98049 82656</p>
+                </li>
+                <li>
+                  <h4 class="widget-contact__title">Email:</h4>
+                  <p class="widget-contact__text">
+                    <a class="widget-contact__text-email" href="mailto:info@disciplemart.com">info@disciplemart.com</a>
+                  </p>
+                </li>
+              </ul>
+          </div>
+          <div class="spacer50"></div>
+          <hr/>
+          <p class="copyright">Disciple Mart © 2017 All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/responsivetabs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#banner').owlCarousel({
+            loop:true,
+            margin:0,
+            nav:false,
+            dots: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        });
+        $('#testimonial').owlCarousel({
+            loop:true,
+            margin:30,
+            nav:false,
+            dots: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:3
+                }
+            }
+        });
+        $(document).on('responsive-tabs.initialised', function (event, el){});
+        $(document).on('responsive-tabs.change', function (event, el, newPanel){});
+        $('[data-responsive-tabs]').responsivetabs({
+          initialised : function (){},
+          change : function (newPanel){}
+        });
+        $('[data-fancybox]').fancybox({
+        });
+        function toggleIcon(e) {
+            $(e.target)
+                .prev('.panel-heading')
+                .find(".more-less")
+                .toggleClass('glyphicon-plus glyphicon-minus');
+        }
+        $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+        $('.panel-group').on('shown.bs.collapse', toggleIcon);
+      });
+    </script>
+  </body>
+</html>
