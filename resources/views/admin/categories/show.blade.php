@@ -9,7 +9,7 @@
             <div class="col-md-12">
                 <div class="card"> 
 				  
-           <a class="btn btn-primary btn-fill btn-sm pull-right" href="{{ route('categories') }}"> Back</a>
+           <a class=" pull-right" href="{{ route('categories') }}"> <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                <h2 class="panel-title">Show Category</h2> <br>
                <div class="content">
                         <div class="form-group">

@@ -2,13 +2,14 @@
 
 @section('content')
 <div class="content">
+<div class="panel-body">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card"> 
                     <div class="panel-title">
                         Show Chapter
-                        <a class="btn btn-primary btn-fill btn-sm pull-right" href="{{ route('admin.chapters.index',$course_id) }}"> Back</a>
+                        <a class=" pull-right" href="{{ route('chapters.index',$course_id) }}"> <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                     </div>
                     <div class="content">
                         <div class="form-group">
@@ -31,5 +32,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @stop

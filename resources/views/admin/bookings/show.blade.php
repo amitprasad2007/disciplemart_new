@@ -8,7 +8,7 @@
                 <div class="card"> 
                     <div class="panel-title">
                         Booking Details
-                        <a class="btn btn-primary btn-fill btn-sm pull-right" onclick="window.close();"> Close</a>
+                        <a class="pull-right" onclick="window.close();"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                     </div>
                     <div class="content">
                         <div class="form-group">

@@ -14,7 +14,7 @@
                 <div class="card"> 
                     <div class="col-md-12 panel-title">
                         Show Advertisement
-                        <a class="btn btn-primary btn-fill btn-sm pull-right" href="{{ route('advertisements.index') }}"> Back</a>
+                        <a class=" pull-right" href="{{ route('advertisements.index') }}"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                     </div>
                     <div class="content">
                         <div class="form-group">

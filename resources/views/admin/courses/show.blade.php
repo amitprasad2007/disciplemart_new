@@ -8,7 +8,7 @@
                 <div class="card"> 
                     <div class="panel-title">
                         Show Course
-                        <a class="btn btn-primary btn-fill btn-sm pull-right" href="{{ route('courses.index') }}"> Back</a>
+                        <a class=" pull-right" href="{{ route('courses.index') }}"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                     </div>
                     <div class="content">
                         <div class="form-group">

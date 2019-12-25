@@ -6,7 +6,8 @@
             <header class="panel-heading">
                 <div class="panel-actions">
                     <a href="#" class="fa fa-caret-down" ></a>
-                  <a href="{{route('users.index')}}" class="fa fa-times"></a>
+                    <a class=" pull-right" href="{{ route('users.index') }}"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+</a>
                 </div>
         <h2 class="panel-title">{{ $user->name }}</h2>
             </header>

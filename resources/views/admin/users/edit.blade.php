@@ -2,7 +2,7 @@
 @section('content')
 <section class="panel">
 <div class="content">
-
+<div class="panel-body">
 	<div class="row">
             <div class="col-md-8">
                 <div class="card">
@@ -126,6 +126,7 @@
                         {!! Form::Model($user,array('route'=> array('users.update',$user->id),'method'=>'PATCH','class'=>'','autocomplete'=>'off','enctype'=>'multipart/form-data','id'=>'planner-form')) !!}
                         @include('admin.users._partials.academic')
                         <button type="submit" class="btn btn-info btn-fill pull-right">Update</button>
+                        
                         <div class="clearfix"></div>
                         {!! Form::close() !!}
                     </div>
@@ -158,6 +159,7 @@
     </div>
 </div>
  </div>
+ </div> 
         </section>  
 <script type="text/javascript">
 

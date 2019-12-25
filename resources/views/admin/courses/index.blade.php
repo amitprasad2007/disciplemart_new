@@ -78,7 +78,7 @@
                                             </a>    
                                         </td>
                                         <td>
-                                            <a class="btn btn-default btn-fill btn-xs" href="{{ route('chapters.index',$course->id) }}">Chapters</a>
+                                            <a class="btn btn-primary btn-fill btn-xs" href="{{ route('chapters.index',$course->id) }}">Chapters</a>
 
                                             @if($course->is_active == 0)
                                             <a class="btn btn-danger btn-fill btn-xs" href="javascript:void(0)">Inactive</a>

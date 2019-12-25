@@ -1,14 +1,15 @@
 @extends('layouts.master')
 @section('content')
 <div class="content">
+<div class="panel-body">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card"> 
                     <div class="panel-title">
                         Chapters<br><br>
-                        <a class="btn btn-primary btn-fill btn-sm pull-right" href="{{ route('courses.index') }}"> Back</a>
-                        <a class="btn btn-default btn-fill btn-sm pull-left" href="{{ route('chapters.create',$course_id) }}"> Create</a>
+                        <a class="pull-right" href="{{ route('courses.index') }}"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                        <a class="btn btn-primary btn-fill btn-sm pull-right" href="{{ route('chapters.create',$course_id) }}"> Create</a>
                     </div>
                     <br><hr>
                     <div class="content">
@@ -73,5 +74,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @stop
