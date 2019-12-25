@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cms;
+use Auth;
+use Validator;
+use DB;
+use Alert;
 
 class CmsController extends Controller
 {
@@ -26,7 +31,8 @@ class CmsController extends Controller
      */
     public function create()
     {
-        //
+        $cms = Cms::find($id);
+        return view('admin.cms.show', compact('cms'));
     }
 
     /**
@@ -48,8 +54,10 @@ class CmsController extends Controller
      */
     public function show($id)
     {
-        //
+        $cms = Cms::find($id);
+        return view('admin.cms.show', compact('cms'));
     }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -59,7 +67,8 @@ class CmsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cms = Cms::findOrFail($id);
+        return view('admin.cms.edit', compact('cms'));
     }
 
     /**
@@ -71,7 +80,12 @@ class CmsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->all();
+        $input['url_key'] = strtolower(preg_replace("/[^a-zA-Z0-9]+/", "-", $input['page_name']));
+        $cms = Cms::findOrFail($id);
+        $cms->update($input);
+        Alert::Html('Success', '<h2>  Successfully Update </h2>','success');
+        return redirect('cms');
     }
 
     /**

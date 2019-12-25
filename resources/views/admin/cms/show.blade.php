@@ -1,14 +1,20 @@
-@extends('layouts.admin')
+@extends('layouts.master')
 
 @section('content')
+<section class="panel">
+   <header class="panel-heading">
+      <div class="panel-actions">
+      </div>
+   </header>
+   <div class="panel-body">
 <div class="content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card"> 
-                    <div class="header">
+                <div class="col-md-12 panel-title">
                         Show Cms
-                        <a class="btn btn-primary btn-fill btn-sm pull-right" href="{{ route('admin.cms.index') }}"> Back</a>
+                        <a class="btn btn-primary btn-fill btn-sm pull-right" href="{{ route('cms.index') }}"> Back</a>
                     </div>
                     <div class="content">
                         <div class="form-group">
@@ -25,4 +31,7 @@
         </div>
     </div>
 </div>
-@stop
+</div>
+</section>
+          
+@endsection

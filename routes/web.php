@@ -13,9 +13,9 @@
 
 
 Auth::routes();
-Route::get('/', function () {
-    return redirect('login');
-});
+// Route::get('/', function () {
+//     return redirect('login');
+// });
 Route::middleware(['auth'])->group(function () {
 
 
@@ -86,6 +86,7 @@ Route::PUT('role/{role}','RoleController@update')->name('role.update');
 Route::DELETE ('role/{role}','RoleController@destroy')->name('role.destroy');
 Route::resource('permissions', 'PermissionController');
 
-
-
 });
+
+
+

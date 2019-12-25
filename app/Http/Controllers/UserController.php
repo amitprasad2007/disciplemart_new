@@ -16,8 +16,8 @@ class UserController extends Controller
 {
     public function index(Request $request)
 
-    {       
-            $role = Session::get('key');
+    {         $role = Session::get('key');
+            if ($role== 'all_roles'){$role=NULL; }
             if ($request->ajax()){            
             if ($request->role OR $role){  
             if ($request->role){
@@ -34,8 +34,7 @@ class UserController extends Controller
                     ->leftjoin('model_has_roles', 'model_has_roles.model_id', '=', 'users.id')
                     ->join('roles', 'model_has_roles.role_id', '=', 'roles.id')
                     ->where('users.is_deleted', 0)
-                    ->get();}
-                }
+                    ->get();}}
             else{
             $users = User::select('users.*', 'roles.name as role_name')
                     ->leftjoin('model_has_roles', 'model_has_roles.model_id', '=', 'users.id')

@@ -19,7 +19,7 @@
                </li>
                 <li  class="nav-active" style="background-color: #21262d;" >
                   <a href="{{route('cms.index')}}">
-                  <i class="fa fa-grav" aria-hidden="true"></i>
+                  <i class="fa fa-th-list" aria-hidden="true"></i>
                   <span>CMS</span>
                   </a>
                </li>

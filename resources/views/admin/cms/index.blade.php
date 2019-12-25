@@ -1,11 +1,18 @@
 @extends('layouts.master')
+
 @section('content')
+<section class="panel">
+   <header class="panel-heading">
+      <div class="panel-actions">
+      </div>
+   </header>
+   <div class="panel-body">
 <div class="content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card"> 
-                    <div class="header">Cms Pages</div>
+                <div class="col-md-12 panel-title">Cms Pages</div>
                     <div class="content">
                         <div class="toolbar"></div>
                         <div class="fresh-datatables">
@@ -25,8 +32,8 @@
                                         <td>{{$slno}}</td>
                                         <td>{{$val->page_name}}</td>
                                         <td>
-                                            <a class="btn btn-info btn-fill btn-xs" href="{{ route('admin.cms.show',$val->id) }}">Show</a>
-                                            <a class="btn btn-primary btn-fill btn-xs" href="{{ route('admin.cms.edit',$val->id) }}">Edit</a>                                        
+                                            <a class="btn btn-info btn-fill btn-xs" href="{{ route('cms.show',$val->id) }}">Show</a>
+                                            <a class="btn btn-primary btn-fill btn-xs" href="{{ route('cms.edit',$val->id) }}">Edit</a>                                        
                                         </td>
                                     </tr>
                                     <?php $slno = $slno + 1; ?>    
@@ -41,4 +48,7 @@
         </div>
     </div>
 </div>
-@stop
+</div>
+</section>
+          
+@endsection
