@@ -26,7 +26,7 @@ Route::post("/usersdestroy","UserController@usersdestroy")->name("usersdestroy")
 
 
 Route::get('users/change-status/{id}', 'UserController@changeStatus');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@dashboard')->name('home');
 Route::get('categories','CategoriesController@index')->name('categories');
 Route::get('categories/show/{id}','CategoriesController@show')->name('categories.show');
 Route::post('categories/destroy{id}','CategoriesController@destroy')->name('categories.destroy');

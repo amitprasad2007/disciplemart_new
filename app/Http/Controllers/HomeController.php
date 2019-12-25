@@ -98,4 +98,29 @@ class HomeController extends Controller
  Alert::Html('Success', '<h2> Profile Updated Successfully </h2>','success');
             return redirect('profile'); 
         }
+
+        public function dashboard() {
+        
+            if(!Auth::guard()->check()) {
+                Session::flash('message', 'Authentication require.'); 
+                Session::flash('alert-class', 'warning');
+                return redirect('admin');
+            }
+            $totalcount['Totalbookings'] = DB::table('bookings')->count();
+            $totalcount['Totalcourses'] = DB::table('courses')->count();
+            $totalcount['TotalPendingApprovalCourses'] = DB::table('courses')->where('is_active','=',2)->count();
+            $totalcount['Totalmembers'] = DB::table('model_has_roles')->where('role_id','=',3)->count();
+            $totalcount['Totalinstructor'] = DB::table('model_has_roles')->where('role_id','=',2)->count();
+            $totalcount['TotalPendingApprovalInstructor'] = DB::table('model_has_roles')->where('role_id','=',2)->count();
+            
+            $data['instructors'] = User::role('Instructor')->where('is_deleted','=',0)->orderby('id','desc')->limit(5)->get();
+            $data['members'] = User::role('Member')->select('id','name','email')->where('is_deleted','=',0)->orderby('id','desc')->limit(5)->get();
+            $data['bookings'] = DB::table('bookings')->select('booking_id','member_name','member_email','member_phone','total_amount','payment_status')->where('payment_status','!=','')->orderby('id','desc')->limit(5)->get();
+            $data['courses'] = DB::table('courses')->select('id','title','price','offered_price')->where('is_deleted','=',0)->orderby('id','desc')->limit(5)->get();
+            //echo '<pre>'; print_r($data); die;
+            return View('admin.home',compact('totalcount','data'));
+        }
+        
+
+
         }
