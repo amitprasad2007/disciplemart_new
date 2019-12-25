@@ -8,6 +8,7 @@ $catecontroller = new CategoriesController();
 @extends('layouts.master')
 @section('content')
 <div class="content">
+<div class="panel-body">
     <div class="container-fluid">
         <div class="row">         
             <div class="col-md-10">
@@ -63,5 +64,6 @@ $catecontroller = new CategoriesController();
             </div>
         </div> 
     </div>
+</div>  
 </div>  
 @endsection
